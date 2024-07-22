@@ -18,8 +18,7 @@ def create_bookmark(bookmark, folder_name):
     title = re.sub('[^0-9a-zA-Z]+', '_', bookmark['title'])
     html = re.sub('#(\.css|\.js)\?[^"]+#',  '$1', bookmark['url'])
     options = {
-        "load-error-handling ignore": None,
-        "load-error-handling ignore": None,
+        "load-error-handling ignore": None
         "load-media-error-handling ignore": None
     }
     if bookmark.get('title'):
@@ -55,7 +54,7 @@ def title2path(child, prev=None):
             create_bookmark(bookmark, prev['title'])
 
 if __name__ == '__main__':
-    bookmarks = bookmarks_parser.parse("test.html")
+    bookmarks = bookmarks_parser.parse("test.html")#rename to exported html file to be processed
     p = Path('icons')
     if not p.exists():
         p.mkdir()
