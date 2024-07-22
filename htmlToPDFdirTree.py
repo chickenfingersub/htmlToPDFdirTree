@@ -1,4 +1,5 @@
 #original bookmarks2fs https://github.com/bookmarks-tools/bookmarks2fs/blob/master/bookmarks2fs.py
+#wkhtmltopdf required to run pdfkit
 import configparser
 from pathlib import Path
 import base64
